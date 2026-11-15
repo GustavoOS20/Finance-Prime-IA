@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.math.BigDecimal;
@@ -31,11 +32,11 @@ public class TransactionDebit {
 
     private String description;
 
-    @Column(name = "transaction_date", nullable = false)
+    @Column(nullable = false)
     private BigDecimal amount;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "transaction_category", nullable = false)
+    @Column(nullable = false)
     private TransactionType type;
 
     @Enumerated(EnumType.STRING)
@@ -49,6 +50,8 @@ public class TransactionDebit {
     @Column(name = "transaction_date", nullable = false)
     private LocalDate transactionDate;
 
+    @CreationTimestamp
+    @Column(name = "created_at", nullable = false, updatable = false)
     private Instant createdAt;
 }
 
