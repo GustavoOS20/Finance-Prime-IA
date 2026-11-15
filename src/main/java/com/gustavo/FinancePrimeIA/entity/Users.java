@@ -3,6 +3,7 @@ package com.gustavo.FinancePrimeIA.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
@@ -44,6 +45,15 @@ public class Users {
     @Builder.Default
     @Column(nullable = false, name = "email_verified")
     private boolean emailVerified = false;
+
+    @Column(nullable = false)
+    private BigDecimal monthlyIncome;
+
+    @Column(nullable = false)
+    private BigDecimal monthlyExpenseLimit;
+
+    @Column(nullable = false)
+    private Integer creditCardClosingDay;
 }
 
 enum AuthProvider {
