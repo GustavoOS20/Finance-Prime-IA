@@ -1,4 +1,9 @@
 package com.gustavo.FinancePrimeIA.repository;
 
-public interface TransactionDebitRepository {
+import com.gustavo.FinancePrimeIA.entity.TransactionDebit;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface TransactionDebitRepository extends JpaRepository<TransactionDebit, Integer> {
 }
