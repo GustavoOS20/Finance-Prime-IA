@@ -1,5 +1,7 @@
 package com.gustavo.FinancePrimeIA.entity;
 
+import com.gustavo.FinancePrimeIA.entity.enums.InvestimentOperation;
+import com.gustavo.FinancePrimeIA.entity.enums.InvestimentType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -47,12 +49,4 @@ public class Investiment {
     @CreationTimestamp
     @Column(nullable = false, updatable = false)
     private Instant createdAt;
-}
-
-enum InvestimentType {
-    EMERGENCY_RESERVE, FIXED_INCOME, STOCKS , FII, CRYPTO, FUNDS
-}
-
-enum InvestimentOperation {
-    DEPOSIT, WITHDRAWAL
 }

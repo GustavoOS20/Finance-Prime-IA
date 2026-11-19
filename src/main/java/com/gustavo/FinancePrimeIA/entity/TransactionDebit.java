@@ -1,5 +1,8 @@
 package com.gustavo.FinancePrimeIA.entity;
 
+import com.gustavo.FinancePrimeIA.entity.enums.PaymentMethod;
+import com.gustavo.FinancePrimeIA.entity.enums.TransactionCategory;
+import com.gustavo.FinancePrimeIA.entity.enums.TransactionType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -53,16 +56,4 @@ public class TransactionDebit {
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
     private Instant createdAt;
-}
-
-enum TransactionType {
-    INCOME,EXPENSE
-}
-
-enum PaymentMethod {
-    PIX, CREDIT_CARD, DEBIT_CARD, AUTOMATIC_DEBIT
-}
-
-enum TransactionCategory {
-    FOOD, TRANSPORT, ENTERTAINMENT, EDUCATION, HEALTH, OTHER
 }

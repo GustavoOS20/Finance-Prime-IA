@@ -1,5 +1,6 @@
 package com.gustavo.FinancePrimeIA.entity;
 
+import com.gustavo.FinancePrimeIA.entity.enums.AuthProvider;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -54,9 +55,4 @@ public class Users {
 
     @Column(nullable = false)
     private Integer creditCardClosingDay;
-}
-
-enum AuthProvider {
-    LOCAL,
-    GOOGLE
 }
