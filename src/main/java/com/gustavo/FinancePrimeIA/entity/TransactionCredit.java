@@ -1,5 +1,6 @@
 package com.gustavo.FinancePrimeIA.entity;
 
+import com.gustavo.FinancePrimeIA.entity.enums.TransactionCategory;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
